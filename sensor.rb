@@ -1,8 +1,15 @@
 class Sensor < Formula
   desc "PrimeSense sensor module for OpenNI"
   homepage "http://www.primesense.com"
-  url "https://github.com/PrimeSense/Sensor/archive/Stable-5.1.6.6.tar.gz"
-  sha256 "d24797ca2d37d618346724378a664d0f37ad75c7e9e78533b8bc9188d3a97fd2"
+  
+  stable do
+    url "https://github.com/PrimeSense/Sensor/archive/Stable-5.1.6.6.tar.gz"
+    sha256 "d24797ca2d37d618346724378a664d0f37ad75c7e9e78533b8bc9188d3a97fd2"
+    patch do
+      url "https://github.com/gordonmcshane/Sensor/commit/5e92dfaf72a94eafb7745f5d811edb470b02f8bc.diff"
+      sha256 "9f172c3cd4d3905dc9bb5bba877bb0cc2d885c9667120607c2603416454c9931"
+    end
+  end
 
   head do
     url "https://github.com/PrimeSense/Sensor.git"
